@@ -9,23 +9,25 @@ import { MainLayout } from './layouts/main/main.layout';
 const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    data: { title: 'Login - Zulian' }
   },
   {
     path: 'register',
-    component: RegisterComponent
+    component: RegisterComponent,
+    data: { title: 'Register - Zulian' }
   },
   {
     path: '',
-
     component: MainLayout,
     children: [
-      { path: '', component: HomeComponent },
+      { path: '', component: HomeComponent, data: { title: 'Welcome to Zulian' } },
     ]
   },
   {
     path: '**',
-    component: NotFoundComponent
+    component: NotFoundComponent,
+    data: { title: '404 - Page Not Found - Zulian' }
   }
 ];
 
