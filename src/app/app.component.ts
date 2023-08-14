@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'zulian';
+  ngOnInit() {
+    let themeColor = localStorage.getItem('themeColor');
+    if(themeColor){
+      document.documentElement.style.setProperty('--primary-color', themeColor);
+      document.documentElement.style.setProperty('--primary-color-20', themeColor + '33');
+    }
+  }
 }

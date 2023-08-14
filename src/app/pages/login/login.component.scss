@@ -1,0 +1,45 @@
+@import "../../../assets/scss/mixin";
+
+.l-container {
+  background: url(/assets/images/bg.svg) center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.auth-page {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  &__inner {
+    width: 100%;
+    padding: 30px;
+    border-radius: 16px;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+
+  h1 {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  &__note {
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &__txt-right {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #000;
+    text-align: right;
+  }
+  button {
+    margin-top: 20px;
+  }
+}

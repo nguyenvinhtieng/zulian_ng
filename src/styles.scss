@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import "assets/scss/reset-css";
+@import "assets/scss/fonts";
+@import "assets/scss/setting";
+@import "assets/scss/mixin";
+@import "assets/scss/utils";
+
+
+// p {
+//   @include sp {
+//     color: red;
+//   }
+// }

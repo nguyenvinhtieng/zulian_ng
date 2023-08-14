@@ -1,0 +1,31 @@
+@mixin pc {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin min-screen($size) {
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin max-screen($size) {
+  @media (max-width: $size) {
+    @content;
+  }
+}
+
+@function pxToVw($px) {
+  @return ($px / 375) * 100vw;
+}
+
+@function pxToPercent($px) {
+  @return ($px / 375) * 100%;
+}

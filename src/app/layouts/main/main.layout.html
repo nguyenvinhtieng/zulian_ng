@@ -1,0 +1,14 @@
+<div class="layout-main">
+  <div class="layout-main__head">
+    <app-header></app-header>
+  </div>
+  <div class="layout-main__body">
+    <div class="layout-main__sidebar" [ngClass]="{'is-show': isSidebarOpen}">
+      <app-sidebar [isSidebarOpen]="isSidebarOpen" (toggleSidebar)="onToggleSidebar()"></app-sidebar>
+      <button (click)="onToggleSidebar()" class="layout-main__open-sidebar"  [ngClass]="{'is-show': !isSidebarOpen}"><mat-icon>keyboard_arrow_right</mat-icon></button>
+    </div>
+    <div class="layout-main__content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

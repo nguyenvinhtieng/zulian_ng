@@ -1,0 +1,36 @@
+<header class="header">
+  <div class="header__inner">
+    <div class="header__left">
+      <a routerLink="/" class="header__logo header__item"><span>Zulian</span></a>
+      <div class="header__item header__item--add"><mat-icon>add_box</mat-icon></div>
+    </div>
+    <div class="header__right">
+      <div class="header__item header__item--cir header__item--user" #toggleButton (click)="toggleMenu()">
+        <img src="https://source.unsplash.com/random" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="header-menu" *ngIf="isMenuOpen" #menu>
+    <div class="header-menu__group">
+      <h4 class="header-menu__title">Account</h4>
+      <a href="#" class="header-menu__item">Switch accounts</a>
+      <a href="#" class="header-menu__item">Manage account</a>
+    </div>
+    <div class="header-menu__group">
+      <h4 class="header-menu__title">Zulian</h4>
+      <a href="#" class="header-menu__item">Profile and visibility</a>
+      <a href="#" class="header-menu__item">Activity</a>
+      <a href="#" class="header-menu__item">Cards</a>
+      <a href="#" class="header-menu__item">Settings</a>
+    </div>
+    <div class="header-menu__group">
+      <a href="#" class="header-menu__item">Help</a>
+      <a href="#" class="header-menu__item">Shortcuts</a>
+    </div>
+    <div class="header-menu__group">
+      <a routerLink="/login" class="header-menu__item">Logout</a>
+    </div>
+  </div>
+</header>
+
+

@@ -1,0 +1,52 @@
+.layout-main {
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  &__head {
+    min-height: 48px;
+    max-height: 48px;
+  }
+  &__body {
+    display: flex;
+    height: calc(100vh - 48px);
+  }
+  &__sidebar {
+    height: 100%;
+    width: 30px;
+    position: relative;
+    transition: all 0.2s linear;
+    &.is-show {
+      width: 230px;
+    }
+  }
+  &__open-sidebar {
+    position: absolute;
+    top: 11px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: 1px solid #fff;
+    transform: translateX(50%);
+    cursor: pointer;
+    transition: all 0.2s linear;
+    display: none;
+    &.is-show {
+      display: block;
+    }
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  &__content {
+    flex: 1;
+    height: 100%;
+  }
+}

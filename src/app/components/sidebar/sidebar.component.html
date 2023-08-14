@@ -1,0 +1,37 @@
+<aside class="sidebar u-scroll-bar-vertical" [ngClass]="{'is-show': isSidebarOpen}">
+  <div class="sidebar__inner">
+    <div class="sidebar__head">
+      <h3 class="sidebar__head-ttl">Nguyen Vinh Tieng Workspace</h3>
+      <button class="sidebar__head-btn" (click)="closeSidebar()"><mat-icon>keyboard_arrow_left</mat-icon></button>
+    </div>
+    <div class="sidebar__group">
+      <h3 class="sidebar__title">Your boards</h3>
+      <div class="sidebar__list">
+        <div class="sidebar__item is-active">
+          <div class="sidebar__item--img"><img src="https://source.unsplash.com/random" alt=""></div>
+          <p class="sidebar__item--txt">Activity</p>
+        </div>
+        <div class="sidebar__item">
+          <div class="sidebar__item--img"><img src="https://source.unsplash.com/random" alt=""></div>
+          <p class="sidebar__item--txt">Learning</p>
+        </div>
+        <div class="sidebar__item">
+          <div class="sidebar__item--img"><img src="https://source.unsplash.com/random" alt=""></div>
+          <p class="sidebar__item--txt">Tutorial</p>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar__group">
+      <h3 class="sidebar__title">Choose your theme</h3>
+      <div class="sidebar__themes">
+        <span
+          class="sidebar__theme"
+          *ngFor="let theme of themeColors"
+          [ngStyle]="{background: theme}"
+          (click)="changeThemeColor(theme)"
+          ></span>
+        <input class="sidebar__theme" type="color" (input)="updateColor($event)">
+      </div>
+    </div>
+  </div>
+</aside>

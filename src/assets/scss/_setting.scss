@@ -1,0 +1,75 @@
+
+@import "./mixin";
+:root {
+  --primary-color: #4461F2;
+  --primary-color-20: rgba(68, 97, 242, 0.2);
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.l-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.c-txt {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+.c-ttl-01 {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.c-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.c-input-01 {
+  & + .c-input-01 {
+    margin-top: 16px;
+  }
+  input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #EAF0F7;
+    color: #4F555A;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    &::-moz-placeholder {
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+}
+.c-btn-01 {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  box-shadow: #4461F2 0px 0px 0px 1px inset;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  transition: all 0.2s linear;
+  @include pc {
+    &:hover {
+      transform: scale(1.03);
+      opacity: 0.9;
+    }
+  }
+}
